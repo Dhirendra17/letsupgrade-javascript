@@ -1,0 +1,83 @@
+JavaScript Essentials Day 3-1
+
+
+Question 1
+Explore and explain the various methods in console function?
+
+Ans. In javascript, the console is an object which provides access to the browser debugging console. The console object provides us with several different methods, like :log(),error(),warn(),clear(),time() and timeEnd()
+1.console.log():This function used to print or log the output to the console. It can take any type inside it like a string, an array or any object.
+Eg: console.log("Hey"), will return Hey as the output on the console.
+   console.log(true), will return the Boolean value true on the console.
+2.console.error():It is used to log an error to the console. This is useful for testing the code for some big projects.
+Eg: console.error("an error occured!"),will give an error message with an by default red color highlighted message.
+3.console.warn():Warn function is used to give a warning message to the user on console.
+Eg: console.warn("Hey this is a warning!!"), this function will return the warning message on the console with a yellow color by default.
+4.console.clear():This function clears the console. Depending on the browser, a message will be generated to show that the console has been cleared.
+Eg:console.clear()
+5.console.time() and timeEnd():To count the amount of time taken to complete a block of code or a piece of code from the entire code this method is be used. The time and timeEnd function should take the same label to count the time.
+  Eg: console.time(“Time taken”);
+       console.log("Hey")
+       console.warn("Hey this is a warning!!")
+      console.timeEnd(“Time Taken”);this will retuen the time taken for the above code with  the label as Time Taken.
+6.console.table(): This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+
+
+
+
+Question 2
+Write the difference between var, let and const with code examples.
+
+1.var declarations are globally scoped or function scoped while let and const are block scoped.
+2.var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+3.They are all hoisted to the top of their scope but while varvariables are initialized with undefined, let and const variables are not initialized.
+4.While var and let can be declared without being initialized, const must be initialized during declaration
+Examples
+1.var
+function f1(){
+    var a =5;
+    console.log(5);  // output 5
+    if(true){
+     var a=2;
+     console.log(2); // output 2
+    }
+    console.log(2);  // output 2
+  }
+2.let
+function f2(){
+    let a =10;
+    console.log(a);  // output 10
+    if(true){
+     let a=20;
+     console.log(a); // output 20
+    }
+    console.log(a);  // output 10
+  }
+3.const
+function f3(){
+    const MY_VARIABLE =10;
+    console.log(MY_VARIABLE);  //output 10
+    MY_VARIABLE =20;           //throws type error
+    console.log(MY_VARIABLE); 
+  }
+
+
+
+Question 3
+Write a brief intro on available datatypes in Javascript
+
+
+In JavaScript there are two different kinds of data: primitives, and objects. A primitive is simply a data type that is not an object, and has no methods.
+Primitive
+In JS, there are six primitive data types:
+1.Boolean:A boolean represents only one of two values: true, or false.
+2.Number: Numbers can be written with or without a decimal point.
+3.String:Strings are used for storing text,and are immutable.
+4.Null:Null has one value: null. It is explicitly nothing.
+5.Undefined:A variable that has no value is undefined.
+6.Symbol:A Symbol is an immutable primitive value that is unique. 
+
+Objects
+Objects are not a primitive data Type.
+An object is a collection of properties. These properties are stored in key/value pairs. Properties can reference any type of data, including objects and/or primitive values.
+
+
