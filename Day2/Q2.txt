@@ -1,0 +1,39 @@
+This is Q2 for Day 2 JS Essentials
+
+
+Question
+Explain with examples remaining types  of methods in Strings and Arrays.
+
+1)Methods is Strings:
+      1.search():The search() method searches a string for a specified value and returns the position of the match.
+	      Eg:var str = "Please locate where 'locate' occurs!";
+                                            var pos = str.search("locate");//output will be 7
+      2.slice():It extracts a part of a string and returns the extracted part in a new string.The method takes 2 parameters: the start position, and the end position (end not included).
+                     Eg: This example slices out a portion of a string from position 7 to position 12 (13-1)
+     	            var str = "Apple, Banana, Kiwi";
+                              var res = str.slice(7, 13);//outputs Banana
+      3.substring():It is similar to slice().The difference is that substring() cannot accept negative indexes.
+               	           Eg:var str = "Apple, Banana, Kiwi";
+                                var res = str.substr(7, 6);//oututs Banana
+      4.replace():This method replaces a specified value with another value in a string:
+                          Eg:str = "Please visit  myWebsite!";
+	              var n = str.replace("myWebsite", "my Website");//outputs as please visit  my Website
+      5.trim():The trim() method removes whitespace from both sides of a string.
+                   Eg:var str = "       Hello Javascript        ";
+                        console.log(str.trim());//outputs as "Hello Javascript"
+  
+
+2)Methods in Arrays
+        1.toString(): It  converts an array to a string of (comma separated) array values. It is same as join() method.
+                            Eg:var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                                 consle.log(fruits.toString())//output will be Banana,Orange,Apple,Mango
+       2.pop():This method removes the last element from an array.
+                    Eg:var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                          fruits.pop(); // Removes the last element ("Mango") from fruits
+       3.push():The push() method adds a new element to an array (at the end).
+                      Eg:var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	         fruits.push("Kiwi"); //  Adds a new element ("Kiwi") to fruits
+       4.splice():The splice() method returns an array with the deleted items.
+                       Eg:var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                            fruits.splice(0, 1); // Removes the first element of fruits
+
